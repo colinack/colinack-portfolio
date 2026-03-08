@@ -89,14 +89,14 @@ const ContactSection = () => {
 
             <div className="space-y-4 mt-8">
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:colin13470@gmail.com"
                 className="flex items-center gap-4 bg-card comic-border comic-shadow-sm p-4 font-body text-card-foreground hover:bg-accent hover:text-accent-foreground transition-colors group"
               >
                 <Mail className="w-6 h-6" />
-                <span className="font-semibold">your.email@example.com</span>
+                <span className="font-semibold">colin13470@gmail.com</span>
               </a>
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://linkedin.com/in/colin-ack"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 bg-card comic-border comic-shadow-sm p-4 font-body text-card-foreground hover:bg-primary hover:text-primary-foreground transition-colors group"
@@ -105,7 +105,7 @@ const ContactSection = () => {
                 <span className="font-semibold">LinkedIn Profile</span>
               </a>
               <a
-                href="https://github.com/yourprofile"
+                href="https://github.com/colinack"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 bg-card comic-border comic-shadow-sm p-4 font-body text-card-foreground hover:bg-foreground hover:text-background transition-colors group"

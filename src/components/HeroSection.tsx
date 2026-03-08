@@ -64,7 +64,7 @@ const HeroSection = () => {
                 className="w-full h-auto"
               />
               <div className="bg-accent text-accent-foreground font-display text-center py-2 text-xl comic-border border-b-0 border-l-0 border-r-0 mt-2">
-                GAME DEVELOPER IN THE MAKING
+                Colin Ackroyd
               </div>
             </div>
           </motion.div>

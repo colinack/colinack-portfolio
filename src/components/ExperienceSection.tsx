@@ -12,18 +12,18 @@ interface TimelineItem {
 const timelineData: TimelineItem[] = [
   {
     period: "2023 — Present",
-    title: "B.Sc. Computer Science",
-    org: "Your University Name",
+    title: "M.SC. Computer Science",
+    org: "Epitech Marseille",
     description:
-      "Studying core CS fundamentals including algorithms, data structures, computer graphics, and software engineering. Specializing in game-related electives.",
+      "Studying core C and C++ fundamentals including algorithms, data structures, computer graphics, and software engineering. Specializing in game-related electives.",
     type: "education",
   },
   {
-    period: "Summer 2024",
-    title: "Game Development Intern",
-    org: "Studio Name",
+    period: "September 2024 - January 2025",
+    title: "DevOps Intern",
+    org: "Française des Jeux",
     description:
-      "Contributed to gameplay programming on a live title. Implemented UI systems and optimized game loop performance.",
+      "Mastered CI/CD Platform tools within the FDJ ecosystem. Designed and developed a custom Status Page. Deployed applications to FDJ’s internal infrastructure using Kubernetes. Analyzed and configured technical solutions tailored to team-specific needs.",
     type: "experience",
   },
   {
@@ -34,14 +34,7 @@ const timelineData: TimelineItem[] = [
       "Designed and developed a complete puzzle game in 48 hours. Won 'Best Gameplay' award among 50+ entries.",
     type: "experience",
   },
-  {
-    period: "2020 — 2023",
-    title: "High School Diploma",
-    org: "Your School Name",
-    description:
-      "Focused on mathematics and computer science. Developed first games and started learning C++ independently.",
-    type: "education",
-  },
+  
 ];
 
 const ExperienceSection = () => {

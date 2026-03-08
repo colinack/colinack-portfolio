@@ -6,12 +6,12 @@ const ComicFooter = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="font-display text-2xl tracking-wider">
-            &lt;PLAYER_ONE /&gt;
+            COLIN ACKROYD
           </div>
 
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/yourprofile"
+              href="https://github.com/colinack"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 hover:text-accent transition-colors"
@@ -20,7 +20,7 @@ const ComicFooter = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://linkedin.com/in/colin-ack"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 hover:text-accent transition-colors"
@@ -29,7 +29,7 @@ const ComicFooter = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:colin13470@gmail.com"
               className="p-2 hover:text-accent transition-colors"
               aria-label="Email"
             >
@@ -38,7 +38,7 @@ const ComicFooter = () => {
           </div>
 
           <p className="font-body text-sm opacity-70">
-            © {new Date().getFullYear()} Your Name. All rights reserved.
+            © {new Date().getFullYear()} Colin Ackroyd. All rights reserved.
           </p>
         </div>
       </div>

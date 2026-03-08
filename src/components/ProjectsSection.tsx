@@ -13,37 +13,37 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "DUNGEON CRAWLER RPG",
+    title: "RTYPE",
     description:
-      "A procedurally generated dungeon crawler with real-time combat, loot systems, and permadeath mechanics. Built with a custom ECS architecture.",
-    techStack: ["C++", "OpenGL", "Custom Engine"],
+      "A multiplayer remake of the classic R-Type built in C++ using an Entity Component System (ECS) architecture. The project implements a client-server model with TCP and UDP networking.",
+    techStack: ["C++", "SFML", "Custom Engine"],
     imageColor: "bg-secondary",
     detailsUrl: "#",
     githubUrl: "#",
   },
   {
-    title: "PIXEL PLATFORMER",
+    title: "ZAPPY",
     description:
-      "A fast-paced 2D platformer with tight controls, wall-jumping, and speed-run leaderboards. Features a custom physics engine and particle system.",
-    techStack: ["Unity", "C#", "Photoshop"],
+      "Development of a multiplayer network game with a C server, an autonomous AI, and a C++ graphical client. AI-controlled players explore a map, collect resources, and cooperate to level up in a real-time simulation.",
+    techStack: ["C", "C++", "SFML"],
     imageColor: "bg-primary",
     detailsUrl: "#",
     githubUrl: "#",
   },
   {
-    title: "MULTIPLAYER ARENA",
+    title: "Horror Game (Prototype)",
     description:
-      "A competitive top-down arena shooter with real-time netcode, client-side prediction, and lag compensation. Supports 4-player online matches.",
-    techStack: ["Unreal Engine", "C++", "Networking"],
+      "A Prototype of a 3D horror game built in Unity for an itch.io Game Jam. ",
+    techStack: ["Unity", "C#"],
     imageColor: "bg-comic-purple",
     detailsUrl: "#",
     githubUrl: "#",
   },
   {
-    title: "PUZZLE ADVENTURE",
+    title: "2D Plateformer (Prototype)",
     description:
-      "A narrative-driven puzzle game with environmental storytelling, a custom dialogue system, and branching paths. Created during a 48h game jam.",
-    techStack: ["Godot", "GDScript", "Aseprite"],
+      "A 2D plateformer built in Unity during a 2 days winter Game Jam.",
+    techStack: ["Unity", "C#"],
     imageColor: "bg-comic-cyan",
     detailsUrl: "#",
     githubUrl: "#",

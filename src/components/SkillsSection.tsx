@@ -14,7 +14,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: "PROGRAMMING",
     icon: <Code className="w-8 h-8" />,
-    skills: ["C++", "C#", "Python", "Java", "JavaScript", "Lua"],
+    skills: ["C", "C++", "C#", "TypeScript", "Lua"],
     bgClass: "bg-primary text-primary-foreground",
     textClass: "bg-primary-foreground text-primary",
   },
@@ -28,7 +28,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: "TOOLS & ENGINES",
     icon: <Wrench className="w-8 h-8" />,
-    skills: ["Git & GitHub", "Visual Studio", "Blender", "Photoshop", "Figma", "Trello"],
+    skills: ["Git & GitHub", "Unity", "Docker", "Figma"],
     bgClass: "bg-accent text-accent-foreground",
     textClass: "bg-accent-foreground text-accent",
   },
