@@ -34,7 +34,7 @@ const timelineData: TimelineItem[] = [
       "Designed and developed a complete puzzle game in 48 hours. Won 'Best Gameplay' award among 50+ entries.",
     type: "experience",
   },
-  
+
 ];
 
 const ExperienceSection = () => {
@@ -60,9 +60,8 @@ const ExperienceSection = () => {
               initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: i * 0.15, duration: 0.5 }}
-              className={`relative flex mb-8 ${
-                i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } flex-row`}
+              className={`relative flex mb-8 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                } flex-row`}
             >
               {/* Dot */}
               <div className="absolute left-6 md:left-1/2 w-4 h-4 bg-accent comic-border rounded-full transform -translate-x-1.5 md:-translate-x-2 mt-6 z-10" />
@@ -70,11 +69,10 @@ const ExperienceSection = () => {
               {/* Card */}
               <div className={`ml-14 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
                 <div
-                  className={`comic-border-thick comic-shadow p-5 ${
-                    item.type === "education"
+                  className={`comic-border-thick comic-shadow p-5 comic-card-hover ${item.type === "education"
                       ? "bg-primary text-primary-foreground"
                       : "bg-card text-card-foreground"
-                  }`}
+                    }`}
                 >
                   <span className="font-display text-sm bg-accent text-accent-foreground px-2 py-0.5 comic-border inline-block mb-2">
                     {item.period}

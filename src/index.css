@@ -203,3 +203,29 @@
   0% { background-position: 0 0; }
   100% { background-position: 6px 6px; }
 }
+
+@layer utilities {
+  .comic-hover {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+  
+  .comic-hover:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0px hsl(var(--foreground));
+  }
+
+  .comic-hover:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px hsl(var(--foreground));
+  }
+
+  .comic-card-hover {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+
+  .comic-card-hover:hover {
+    transform: translate(-6px, -6px);
+    box-shadow: 12px 12px 0px hsl(var(--foreground));
+  }
+}
+

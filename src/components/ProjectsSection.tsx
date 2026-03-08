@@ -75,7 +75,7 @@ const ProjectsSection = () => {
               initial={{ opacity: 0, y: 50, rotate: i % 2 === 0 ? -1 : 1 }}
               animate={isInView ? { opacity: 1, y: 0, rotate: 0 } : {}}
               transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="comic-border-thick comic-shadow-lg bg-card group hover:translate-x-[-4px] hover:translate-y-[-4px] transition-transform duration-200"
+              className="comic-border-thick comic-shadow-lg bg-card group comic-card-hover"
             >
               {/* Image placeholder area */}
               <div className={`${project.imageColor} h-48 relative halftone overflow-hidden`}>
@@ -111,14 +111,14 @@ const ProjectsSection = () => {
                 <div className="flex gap-3">
                   <a
                     href={project.detailsUrl}
-                    className="flex-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground comic-border px-4 py-3 font-display text-lg hover:bg-secondary transition-colors"
+                    className="flex-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground comic-border px-4 py-3 font-display text-lg comic-hover hover:bg-secondary transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
                     VIEW DETAILS
                   </a>
                   <a
                     href={project.githubUrl}
-                    className="flex items-center justify-center gap-2 bg-foreground text-background comic-border px-4 py-3 font-display text-lg hover:bg-muted-foreground transition-colors"
+                    className="flex items-center justify-center gap-2 bg-foreground text-background comic-border px-4 py-3 font-display text-lg comic-hover hover:bg-muted-foreground transition-colors"
                   >
                     <Github className="w-4 h-4" />
                     CODE

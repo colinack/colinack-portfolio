@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/profile.png";
+import { ComicParticles } from "./ComicParticles";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-primary halftone">
       {/* Bold background shapes */}
       <div className="absolute inset-0 overflow-hidden">
+        <ComicParticles />
         <div className="absolute -top-20 -right-20 w-96 h-96 bg-accent rounded-full opacity-60" />
         <div className="absolute bottom-10 -left-10 w-72 h-72 bg-secondary rounded-full opacity-40" />
         <div className="absolute top-1/3 right-1/4 w-40 h-40 bg-comic-purple rounded-full opacity-30" />
@@ -34,20 +36,28 @@ const HeroSection = () => {
 
             <div className="speech-bubble max-w-md mb-8 bg-card">
               <p className="font-body text-card-foreground text-lg">
-                Computer Science student & aspiring <strong>Game Developer</strong>. 
-                Passionate about crafting immersive gameplay experiences, from 
+                Computer Science student & aspiring <strong>Game Developer</strong>.
+                Passionate about crafting immersive gameplay experiences, from
                 engine architecture to player-facing systems.
               </p>
             </div>
 
-            <motion.a
-              href="#projects"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-secondary text-secondary-foreground comic-border-thick comic-shadow-lg px-8 py-4 font-display text-2xl tracking-wide hover:bg-accent hover:text-accent-foreground transition-colors"
-            >
-              ⚡ START THE ADVENTURE
-            </motion.a>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                className="inline-block bg-secondary text-secondary-foreground comic-border-thick comic-shadow-lg px-8 py-4 font-display text-2xl tracking-wide comic-hover hover:bg-accent hover:text-accent-foreground"
+              >
+                ⚡ START THE ADVENTURE
+              </a>
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-comic-cyan text-primary-foreground comic-border-thick comic-shadow-lg px-8 py-4 font-display text-2xl tracking-wide comic-hover hover:bg-background hover:text-foreground"
+              >
+                📄 VIEW CV
+              </a>
+            </div>
           </motion.div>
 
           {/* Image side */}
@@ -61,7 +71,7 @@ const HeroSection = () => {
               <img
                 src={heroImage}
                 alt="Game Developer Hero Illustration"
-                className="w-full h-auto"
+                className="w-full h-auto p-6 sm:p-10"
               />
               <div className="bg-accent text-accent-foreground font-display text-center py-2 text-xl comic-border border-b-0 border-l-0 border-r-0 mt-2">
                 Colin Ackroyd
