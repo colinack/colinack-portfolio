@@ -19,7 +19,7 @@ const projects: Project[] = [
     title: "RTYPE",
     description:
       "A multiplayer remake of the classic R-Type built in C++ using an Entity Component System (ECS) architecture. The project implements a client-server model with TCP and UDP networking.",
-    techStack: ["C++", "SFML", "Custom Engine"],
+    techStack: ["C++", "SFML", "Custom Engine", "ASIO Networking"],
     imageColor: "bg-secondary",
     imageUrl: rtypeImg,
     detailsUrl: "/projects/rtype",
@@ -29,10 +29,10 @@ const projects: Project[] = [
     title: "ZAPPY",
     description:
       "Development of a multiplayer network game with a C server, an autonomous AI, and a C++ graphical client. AI-controlled players explore a map, collect resources, and cooperate to level up in a real-time simulation.",
-    techStack: ["C", "C++", "SFML"],
+    techStack: ["C", "C++", "SFML", "AI"],
     imageColor: "bg-primary",
     imageUrl: zappyImg,
-    detailsUrl: "#",
+    detailsUrl: "/projects/zappy",
     githubUrl: "#",
   },
   {

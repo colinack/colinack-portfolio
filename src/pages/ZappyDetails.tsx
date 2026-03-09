@@ -2,9 +2,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Github } from "lucide-react";
 import ComicFooter from "@/components/ComicFooter";
-import rtypeVideo from "@/assets/rtype-video.mp4";
+import zappyImg1 from "@/assets/zappy_1.png";
+import zappyImg2 from "@/assets/zappy-screen.png";
 
-const RTypeDetails = () => {
+const ZappyDetails = () => {
     return (
         <div className="min-h-screen flex flex-col bg-background halftone pt-12">
             <main className="flex-1 container mx-auto px-6 py-12 -mt-4">
@@ -29,9 +30,9 @@ const RTypeDetails = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-7xl font-display inline-block bg-secondary text-secondary-foreground px-8 py-3 comic-border-thick comic-shadow-lg rotate-[-2deg]"
+                        className="text-5xl md:text-7xl font-display inline-block bg-primary text-primary-foreground px-8 py-3 comic-border-thick comic-shadow-lg rotate-[2deg]"
                     >
-                        RTYPE
+                        ZAPPY
                     </motion.h1>
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -39,7 +40,7 @@ const RTypeDetails = () => {
                         transition={{ delay: 0.2 }}
                         className="mt-6 flex flex-wrap justify-center gap-3"
                     >
-                        {["C++", "SFML", "Custom Engine", "Asio Networking"].map((tech) => (
+                        {["C", "C++", "SFML", "AI", "Sockets"].map((tech) => (
                             <span
                                 key={tech}
                                 className="bg-muted text-muted-foreground comic-border px-4 py-2 font-body text-sm font-semibold uppercase tracking-wide"
@@ -51,26 +52,32 @@ const RTypeDetails = () => {
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
-                    {/* Video Demo */}
+                    {/* Screenshots Demo */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.3 }}
                         className="comic-border-thick comic-shadow-lg bg-card p-2 md:p-3 rotate-[1deg]"
                     >
-                        <div className="relative aspect-video bg-black comic-border overflow-hidden">
-                            <video
-                                src={rtypeVideo}
-                                className="w-full h-full object-cover"
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                controls
-                            />
+                        <div className="flex flex-col gap-4">
+                            {/* <div className="relative aspect-video bg-black comic-border overflow-hidden">
+                                <img
+                                    src={zappyImg1}
+                                    alt="Zappy Gameplay Screenshot 1"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div> */}
+                            <div className="relative aspect-video bg-black comic-border overflow-hidden">
+                                <img
+                                    src={zappyImg2}
+                                    alt="Zappy Gameplay Screenshot 2"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                         </div>
-                        <div className="bg-accent text-accent-foreground font-display text-center py-2 text-xl comic-border border-b-0 border-l-0 border-r-0 mt-2">
-                            video demo
+
+                        <div className="bg-accent text-accent-foreground font-display text-center py-2 text-xl comic-border border-b-0 border-l-0 border-r-0 mt-4">
+                            screenshots
                         </div>
                         <div className="mt-4 flex w-full">
                             <a
@@ -100,11 +107,10 @@ const RTypeDetails = () => {
                                 </h3>
                                 <div className="font-body text-card-foreground space-y-4 leading-relaxed">
                                     <p>
-                                        A complete multiplayer recreation of the classic arcade shooter
-                                        <strong> R-Type</strong>. Built entirely in C++ from scratch, this project showcases my ability to design complex game architectures and handle real-time networking.
+                                        <strong>Zappy</strong> is a multiplayer network game consisting of a server written in C, autonomous AI clients, and a graphical client written in C++ with SFML.
                                     </p>
                                     <p>
-                                        The engine implements a strict <strong>Entity Component System (ECS)</strong> to cleanly manage gameplay logic, rendering, and physics for hundreds of simultaneous entities.
+                                        In this game, multiple AI-driven teams are dropped onto a grid. Their goal is to collect resources to survive and elevate their levels through complex rituals, all while communicating over the network to coordinate strategies. The graphical client observes the simulation in real-time, providing visual feedback of the map and player actions.
                                     </p>
                                 </div>
                             </div>
@@ -115,10 +121,10 @@ const RTypeDetails = () => {
                                     TECHNICAL HIGHLIGHTS
                                 </h3>
                                 <ul className="list-disc pl-5 space-y-2 font-body text-muted-foreground mb-0">
-                                    <li><strong>Custom ECS:</strong> Sparse set implementation for fast component iteration.</li>
-                                    <li><strong>Networking:</strong> Custom UDP/TCP protocol using Asio. Client-side prediction and server reconciliation for smooth gameplay.</li>
-                                    <li><strong>SFML Rendering:</strong> Optimized sprite batching and animated entity states.</li>
-                                    <li><strong>Cross-Platform:</strong> Build environment configured with CMake for Linux and Windows.</li>
+                                    <li><strong>C Server:</strong> Handles TCP socket connections and multiplexing via select/epoll for real-time state management.</li>
+                                    <li><strong>Client AI:</strong> Autonomous agents reacting to server broadcast commands to survive and collect stones.</li>
+                                    <li><strong>SFML Graphical Client:</strong> Visualizes the simulation and parses custom server protocols built in C++.</li>
+                                    <li><strong>Synchronization:</strong> Complex time-based event queue system to manage actions latency across connected TCP clients.</li>
                                 </ul>
                             </div>
                         </div>
@@ -131,4 +137,4 @@ const RTypeDetails = () => {
     );
 };
 
-export default RTypeDetails;
+export default ZappyDetails;
