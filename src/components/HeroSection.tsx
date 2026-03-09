@@ -27,11 +27,11 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display text-primary-foreground leading-none mb-6">
-              BUILDING
+              JUNIOR
               <br />
-              <span className="text-accent">INTERACTIVE</span>
+              <span className="text-accent">SOFTWARE</span>
               <br />
-              WORLDS
+              DEVELOPER
             </h1>
 
             <div className="speech-bubble max-w-md mb-8 bg-card">
@@ -50,7 +50,7 @@ const HeroSection = () => {
                 ⚡ START THE ADVENTURE
               </a>
               <a
-                href="/cv.pdf"
+                href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-comic-cyan text-primary-foreground comic-border-thick comic-shadow-lg px-8 py-4 font-display text-2xl tracking-wide comic-hover hover:bg-background hover:text-foreground"
