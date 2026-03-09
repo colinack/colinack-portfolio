@@ -1,12 +1,15 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
+import rtypeImg from "@/assets/rtype-screen.png";
+import zappyImg from "@/assets/zappy-screen.png";
 
 interface Project {
   title: string;
   description: string;
   techStack: string[];
   imageColor: string;
+  imageUrl?: string;
   detailsUrl: string;
   githubUrl: string;
 }
@@ -18,7 +21,8 @@ const projects: Project[] = [
       "A multiplayer remake of the classic R-Type built in C++ using an Entity Component System (ECS) architecture. The project implements a client-server model with TCP and UDP networking.",
     techStack: ["C++", "SFML", "Custom Engine"],
     imageColor: "bg-secondary",
-    detailsUrl: "#",
+    imageUrl: rtypeImg,
+    detailsUrl: "/projects/rtype",
     githubUrl: "#",
   },
   {
@@ -27,6 +31,7 @@ const projects: Project[] = [
       "Development of a multiplayer network game with a C server, an autonomous AI, and a C++ graphical client. AI-controlled players explore a map, collect resources, and cooperate to level up in a real-time simulation.",
     techStack: ["C", "C++", "SFML"],
     imageColor: "bg-primary",
+    imageUrl: zappyImg,
     detailsUrl: "#",
     githubUrl: "#",
   },
@@ -79,11 +84,19 @@ const ProjectsSection = () => {
             >
               {/* Image placeholder area */}
               <div className={`${project.imageColor} h-48 relative halftone overflow-hidden`}>
-                <div className="absolute inset-0 flex items-center justify-center z-10">
-                  <span className="font-display text-3xl text-primary-foreground bg-foreground/60 px-4 py-2">
-                    📸 SCREENSHOT
-                  </span>
-                </div>
+                {project.imageUrl ? (
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover z-0"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <span className="font-display text-3xl text-primary-foreground bg-foreground/60 px-4 py-2">
+                      📸 SCREENSHOT
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Content */}
