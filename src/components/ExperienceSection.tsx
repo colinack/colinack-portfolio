@@ -27,12 +27,12 @@ const timelineData: TimelineItem[] = [
     type: "experience",
   },
   {
-    period: "2023",
-    title: "Game Jam Winner — 48h Challenge",
-    org: "Global Game Jam",
+    period: "September 2026 - June 2026",
+    title: "Department of Game & Mobile Engineering",
+    org: "Keimyung University, South Korea",
     description:
-      "Designed and developed a complete puzzle game in 48 hours. Won 'Best Gameplay' award among 50+ entries.",
-    type: "experience",
+      "For my 4th year during my Master's degree, I will be studying Game & Mobile Engineering at Keimyung University in Daegu, South Korea. Starting this September",
+    type: "education",
   },
 
 ];

@@ -3,6 +3,8 @@ import { useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import rtypeImg from "@/assets/rtype-screen.png";
 import zappyImg from "@/assets/zappy-screen.png";
+import platformerImg from "@/assets/2Dplateformer-screen.png";
+import horrorImg from "@/assets/horror-game-screen.png";
 
 interface Project {
   title: string;
@@ -11,7 +13,7 @@ interface Project {
   imageColor: string;
   imageUrl?: string;
   detailsUrl: string;
-  githubUrl: string;
+  githubUrl?: string;
 }
 
 const projects: Project[] = [
@@ -41,8 +43,8 @@ const projects: Project[] = [
       "A Prototype of a 3D horror game built in Unity for an itch.io Game Jam. ",
     techStack: ["Unity", "C#"],
     imageColor: "bg-comic-purple",
-    detailsUrl: "#",
-    githubUrl: "#",
+    imageUrl: horrorImg,
+    detailsUrl: "/projects/horror",
   },
   {
     title: "2D Plateformer (Prototype)",
@@ -50,8 +52,8 @@ const projects: Project[] = [
       "A 2D plateformer built in Unity during a 2 days winter Game Jam.",
     techStack: ["Unity", "C#"],
     imageColor: "bg-comic-cyan",
-    detailsUrl: "#",
-    githubUrl: "#",
+    imageUrl: platformerImg,
+    detailsUrl: "/projects/platformer",
   },
 ];
 
@@ -101,7 +103,7 @@ const ProjectsSection = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="font-display text-2xl text-foreground mb-3 comic-border border-t-0 border-l-0 border-r-0 pb-2">
+                <h3 className="font-display text-2xl text-foreground mb-4 text-center underline decoration-[3px] underline-offset-4">
                   {project.title}
                 </h3>
                 <p className="font-body text-muted-foreground mb-4 leading-relaxed">
@@ -129,13 +131,15 @@ const ProjectsSection = () => {
                     <ExternalLink className="w-4 h-4" />
                     VIEW DETAILS
                   </a>
-                  <a
-                    href={project.githubUrl}
-                    className="flex items-center justify-center gap-2 bg-foreground text-background comic-border px-4 py-3 font-display text-lg comic-hover hover:bg-muted-foreground transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                    CODE
-                  </a>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      className="flex items-center justify-center gap-2 bg-foreground text-background comic-border px-4 py-3 font-display text-lg comic-hover hover:bg-muted-foreground transition-colors"
+                    >
+                      <Github className="w-4 h-4" />
+                      CODE
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import RTypeDetails from "./pages/RTypeDetails";
 import ZappyDetails from "./pages/ZappyDetails";
+import PlatformerDetails from "./pages/PlatformerDetails";
+import HorrorDetails from "./pages/HorrorDetails";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +22,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/projects/rtype" element={<RTypeDetails />} />
           <Route path="/projects/zappy" element={<ZappyDetails />} />
+          <Route path="/projects/platformer" element={<PlatformerDetails />} />
+          <Route path="/projects/horror" element={<HorrorDetails />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

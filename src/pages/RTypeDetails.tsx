@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Github } from "lucide-react";
 import ComicFooter from "@/components/ComicFooter";
-import rtypeVideo from "@/assets/rtype-video.mp4";
 
 const RTypeDetails = () => {
     return (
@@ -59,14 +58,12 @@ const RTypeDetails = () => {
                         className="comic-border-thick comic-shadow-lg bg-card p-2 md:p-3 rotate-[1deg]"
                     >
                         <div className="relative aspect-video bg-black comic-border overflow-hidden">
-                            <video
-                                src={rtypeVideo}
-                                className="w-full h-full object-cover"
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                controls
+                            <iframe
+                                src="https://player.vimeo.com/video/1172273350?autoplay=1&loop=1&muted=1"
+                                className="w-full h-full object-cover absolute top-0 left-0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowFullScreen
+                                style={{ border: 'none' }}
                             />
                         </div>
                         <div className="bg-accent text-accent-foreground font-display text-center py-2 text-xl comic-border border-b-0 border-l-0 border-r-0 mt-2">
