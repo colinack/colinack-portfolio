@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 const navItems = [
 { label: "About", href: "#about" },
 { label: "Projects", href: "#projects" },
-{ label: "Experience", href: "#experience" },
-{ label: "Contact", href: "#contact" }];
+{ label: "Experience", href: "#experience" }];
 
 
 const ComicNav = () => {

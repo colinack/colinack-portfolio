@@ -27,7 +27,7 @@ const timelineData: TimelineItem[] = [
     type: "experience",
   },
   {
-    period: "September 2026 - June 2026",
+    period: "September 2026 - June 2027",
     title: "Department of Game & Mobile Engineering",
     org: "Keimyung University, South Korea",
     description:

@@ -49,13 +49,13 @@ const HorrorDetails = () => {
                     </motion.div>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
+                <div className="flex flex-col gap-12 items-center">
                     {/* Video Demo */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.3 }}
-                        className="comic-border-thick comic-shadow-lg bg-card p-2 md:p-3 rotate-[1deg]"
+                        className="w-full max-w-5xl comic-border-thick comic-shadow-lg bg-card p-2 md:p-3 rotate-[1deg]"
                     >
                         <div className="relative aspect-video bg-black comic-border overflow-hidden">
                             <iframe
@@ -84,40 +84,38 @@ const HorrorDetails = () => {
 
                     {/* Project Details */}
                     <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="space-y-6"
+                        className="w-full max-w-5xl grid md:grid-cols-2 gap-8 items-start"
                     >
-                        <div className="flex flex-col gap-6">
-                            {/* Box 1: Project Overview */}
-                            <div className="comic-border-thick comic-shadow bg-muted p-6">
-                                <h3 className="font-display text-2xl mb-4 text-secondary">
-                                    Project Overview
-                                </h3>
-                                <div className="font-body text-card-foreground space-y-4 leading-relaxed">
-                                    <p>
-                                        A rapid-prototype <strong>3D Horror Game</strong> developed using Unity over the course of an itch.io Game Jam.
-                                    </p>
-                                    <p>
-                                        The primary goal of this jam was to build a tense and immersive atmosphere using lighting, sound design, and first-person mechanics.
-                                        We did not have a lot of time to build a full game, so we focused on creating small mechanics like the flashlight, item selection, and puzzle solving.
-                                    </p>
-                                </div>
+                        {/* Box 1: Project Overview */}
+                        <div className="comic-border-thick comic-shadow bg-muted p-6 h-full flex flex-col justify-start">
+                            <h3 className="font-display text-2xl mb-4 text-secondary">
+                                Project Overview
+                            </h3>
+                            <div className="font-body text-card-foreground space-y-4 leading-relaxed">
+                                <p>
+                                    A rapid-prototype <strong>3D Horror Game</strong> developed using Unity over the course of an itch.io Game Jam.
+                                </p>
+                                <p>
+                                    The primary goal of this jam was to build a tense and immersive atmosphere using lighting, sound design, and first-person mechanics.
+                                    We did not have a lot of time to build a full game, so we focused on creating small mechanics like the flashlight, item selection, and puzzle solving.
+                                </p>
                             </div>
+                        </div>
 
-                            {/* Box 2: Technical Highlights & Links */}
-                            <div className="comic-border-thick comic-shadow bg-muted p-6">
-                                <h3 className="font-display text-2xl mb-4 text-primary">
-                                    TECHNICAL HIGHLIGHTS
-                                </h3>
-                                <ul className="list-disc pl-5 space-y-2 font-body text-muted-foreground mb-0">
-                                    <li><strong>Atmosphere:</strong> Integrated dynamic lighting and post-processing effects to build tension.</li>
-                                    <li><strong>First-Person Controller:</strong> Custom C# controller tailored for exploring indoor environments.</li>
-                                    <li><strong>Rapid Prototyping:</strong> Iterative development workflow optimized for a short Game Jam timeline.</li>
-                                    <li><strong>Interaction System:</strong> Built a flexible raycast-based interaction system for inspecting objects and solving puzzles.</li>
-                                </ul>
-                            </div>
+                        {/* Box 2: Technical Highlights & Links */}
+                        <div className="comic-border-thick comic-shadow bg-muted p-6 h-full flex flex-col justify-start">
+                            <h3 className="font-display text-2xl mb-4 text-primary">
+                                TECHNICAL HIGHLIGHTS
+                            </h3>
+                            <ul className="list-disc pl-5 space-y-2 font-body text-muted-foreground mb-0">
+                                <li><strong>Atmosphere:</strong> Integrated dynamic lighting and post-processing effects to build tension.</li>
+                                <li><strong>First-Person Controller:</strong> Custom C# controller tailored for exploring indoor environments.</li>
+                                <li><strong>Rapid Prototyping:</strong> Iterative development workflow optimized for a short Game Jam timeline.</li>
+                                <li><strong>Interaction System:</strong> Built a flexible raycast-based interaction system for inspecting objects and solving puzzles.</li>
+                            </ul>
                         </div>
                     </motion.div>
                 </div>

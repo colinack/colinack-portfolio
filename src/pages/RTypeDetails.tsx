@@ -49,13 +49,13 @@ const RTypeDetails = () => {
                     </motion.div>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
+                <div className="flex flex-col gap-12 items-center">
                     {/* Video Demo */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.3 }}
-                        className="comic-border-thick comic-shadow-lg bg-card p-2 md:p-3 rotate-[1deg]"
+                        className="w-full max-w-5xl comic-border-thick comic-shadow-lg bg-card p-2 md:p-3 rotate-[1deg]"
                     >
                         <div className="relative aspect-video bg-black comic-border overflow-hidden">
                             <iframe
@@ -84,45 +84,43 @@ const RTypeDetails = () => {
 
                     {/* Project Details */}
                     <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="space-y-6"
+                        className="w-full max-w-5xl grid md:grid-cols-2 gap-8 items-start"
                     >
-                        <div className="flex flex-col gap-6">
-                            {/* Box 1: Project Overview */}
-                            <div className="comic-border-thick comic-shadow bg-muted p-6">
-                                <h3 className="font-display text-2xl mb-4 text-secondary">
-                                    Project Overview
-                                </h3>
-                                <div className="font-body text-card-foreground space-y-4 leading-relaxed">
-                                    <p>
-                                        A complete multiplayer recreation of the classic arcade shooter
-                                        <strong> R-Type</strong>. Built entirely in C++ from scratch, this project showcases my ability to design complex game architectures and handle real-time networking.
-                                    </p>
-                                    <p>
-                                        The engine implements a strict <strong>Entity Component System (ECS)</strong> to cleanly manage gameplay logic, rendering, and physics for hundreds of simultaneous entities.
-                                    </p>
-                                    <p>
-                                        I personally write the entire <strong>protocol</strong> of the project, making the <strong> serialization</strong> and <strong>deserialization</strong> of data between the client and server as simple as possible.
-                                        I made sure the <strong>packet loss</strong> is handled gracefully.
-                                        I also built the client side <strong>server handling</strong> and <strong>graphics</strong> using SFML.
-                                    </p>
-                                </div>
+                        {/* Box 1: Project Overview */}
+                        <div className="comic-border-thick comic-shadow bg-muted p-6 h-full flex flex-col justify-start">
+                            <h3 className="font-display text-2xl mb-4 text-secondary">
+                                Project Overview
+                            </h3>
+                            <div className="font-body text-card-foreground space-y-4 leading-relaxed">
+                                <p>
+                                    A complete multiplayer recreation of the classic arcade shooter
+                                    <strong> R-Type</strong>. Built entirely in C++ from scratch, this project showcases my ability to design complex game architectures and handle real-time networking.
+                                </p>
+                                <p>
+                                    The engine implements a strict <strong>Entity Component System (ECS)</strong> to cleanly manage gameplay logic, rendering, and physics for hundreds of simultaneous entities.
+                                </p>
+                                <p>
+                                    I personally write the entire <strong>protocol</strong> of the project, making the <strong> serialization</strong> and <strong>deserialization</strong> of data between the client and server as simple as possible.
+                                    I made sure the <strong>packet loss</strong> is handled gracefully.
+                                    I also built the client side <strong>server handling</strong> and <strong>graphics</strong> using SFML.
+                                </p>
                             </div>
+                        </div>
 
-                            {/* Box 2: Technical Highlights & Links */}
-                            <div className="comic-border-thick comic-shadow bg-muted p-6">
-                                <h3 className="font-display text-2xl mb-4 text-primary">
-                                    TECHNICAL HIGHLIGHTS
-                                </h3>
-                                <ul className="list-disc pl-5 space-y-2 font-body text-muted-foreground mb-0">
-                                    <li><strong>Custom ECS:</strong> Sparse set implementation for fast component iteration.</li>
-                                    <li><strong>Networking:</strong> Custom UDP/TCP protocol using Asio. Client-side prediction and server reconciliation for smooth gameplay.</li>
-                                    <li><strong>SFML Rendering:</strong> Optimized sprite batching and animated entity states.</li>
-                                    <li><strong>Cross-Platform:</strong> Build environment configured with CMake for Linux and Windows.</li>
-                                </ul>
-                            </div>
+                        {/* Box 2: Technical Highlights & Links */}
+                        <div className="comic-border-thick comic-shadow bg-muted p-6 h-full flex flex-col justify-start">
+                            <h3 className="font-display text-2xl mb-4 text-primary">
+                                TECHNICAL HIGHLIGHTS
+                            </h3>
+                            <ul className="list-disc pl-5 space-y-2 font-body text-muted-foreground mb-0">
+                                <li><strong>Custom ECS:</strong> Sparse set implementation for fast component iteration.</li>
+                                <li><strong>Networking:</strong> Custom UDP/TCP protocol using Asio. Client-side prediction and server reconciliation for smooth gameplay.</li>
+                                <li><strong>SFML Rendering:</strong> Optimized sprite batching and animated entity states.</li>
+                                <li><strong>Cross-Platform:</strong> Build environment configured with CMake for Linux and Windows.</li>
+                            </ul>
                         </div>
                     </motion.div>
                 </div>
