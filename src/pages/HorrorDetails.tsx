@@ -101,6 +101,7 @@ const HorrorDetails = () => {
                                     </p>
                                     <p>
                                         The primary goal of this jam was to build a tense and immersive atmosphere using lighting, sound design, and first-person mechanics.
+                                        We did not have a lot of time to build a full game, so we focused on creating small mechanics like the flashlight, item selection, and puzzle solving.
                                     </p>
                                 </div>
                             </div>

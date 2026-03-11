@@ -103,6 +103,11 @@ const RTypeDetails = () => {
                                     <p>
                                         The engine implements a strict <strong>Entity Component System (ECS)</strong> to cleanly manage gameplay logic, rendering, and physics for hundreds of simultaneous entities.
                                     </p>
+                                    <p>
+                                        I personally write the entire <strong>protocol</strong> of the project, making the <strong> serialization</strong> and <strong>deserialization</strong> of data between the client and server as simple as possible.
+                                        I made sure the <strong>packet loss</strong> is handled gracefully.
+                                        I also built the client side <strong>server handling</strong> and <strong>graphics</strong> using SFML.
+                                    </p>
                                 </div>
                             </div>
 

@@ -112,6 +112,9 @@ const ZappyDetails = () => {
                                     <p>
                                         In this game, multiple AI-driven teams are dropped onto a grid. Their goal is to collect resources to survive and elevate their levels through complex rituals, all while communicating over the network to coordinate strategies. The graphical client observes the simulation in real-time, providing visual feedback of the map and player actions.
                                     </p>
+                                    <p> 
+                                        I made the client side graphics using SFML: A <strong>2D isometric</strong> map using <strong>perlin noise</strong> to generate the terrain in a more natural way, and all the <strong>animations</strong> and <strong>player interactions</strong>.
+                                    </p>
                                 </div>
                             </div>
 
