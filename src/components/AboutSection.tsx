@@ -23,6 +23,22 @@ const AboutSection = () => {
 
           {/* Comic panels layout */}
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.25 }}
+              className="comic-border-thick comic-shadow bg-accent text-accent-foreground p-6 relative"
+            >
+              <div className="bg-foreground text-background font-display text-lg px-3 py-1 inline-block mb-4">
+                THE CODER
+              </div>
+              <p className="font-body leading-relaxed">
+                During my time at Epitech, I have built a strong foundation in <strong>C and C++</strong>, 
+                focusing on low-level system programming and Object-Oriented Programming (OOP). 
+                I am also expanding my skill set through self-driven projects in <strong>C# and Unity</strong>. 
+              </p>
+            </motion.div>
+
             {/* Panel 1 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -42,24 +58,6 @@ const AboutSection = () => {
               </div>
             </motion.div>
 
-            {/* Panel 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.25 }}
-              className="comic-border-thick comic-shadow bg-accent text-accent-foreground p-6 relative"
-            >
-              <div className="bg-foreground text-background font-display text-lg px-3 py-1 inline-block mb-4">
-                THE CODER
-              </div>
-              <p className="font-body leading-relaxed">
-                Studying <strong>Computer Science</strong> has sharpened my 
-                problem-solving mindset. I thrive on writing elegant, performant 
-                code — whether it's gameplay systems, rendering pipelines, 
-                or networking logic.
-              </p>
-            </motion.div>
-
             {/* Panel 3 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -69,12 +67,10 @@ const AboutSection = () => {
             >
               <div className="relative z-10">
                 <div className="bg-accent text-accent-foreground font-display text-lg px-3 py-1 comic-border inline-block mb-4">
-                  THE BUILDER
+                  MY PASSION
                 </div>
                 <p className="font-body leading-relaxed">
-                  I'm driven by the desire to <strong>create worlds</strong> people 
-                  can explore. From game jams to personal projects, every line of code 
-                  brings me closer to my goal: working in the game industry.
+                  
                 </p>
               </div>
             </motion.div>
