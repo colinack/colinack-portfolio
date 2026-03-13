@@ -71,7 +71,7 @@ const RTypeDetails = () => {
                         </div>
                         <div className="mt-4 flex w-full">
                             <a
-                                href="#"
+                                href="https://github.com/colinack/RType"
                                 className="w-full flex items-center justify-center gap-2 bg-foreground text-background comic-border-thick py-3 font-display text-xl comic-hover hover:bg-card hover:text-card-foreground transition-colors"
                                 target="_blank"
                                 rel="noopener noreferrer"

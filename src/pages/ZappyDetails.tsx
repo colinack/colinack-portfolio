@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Github } from "lucide-react";
 import ComicFooter from "@/components/ComicFooter";
-import zappyImg1 from "@/assets/zappy_1.png";
 import zappyImg2 from "@/assets/zappy-screen.png";
 
 const ZappyDetails = () => {
@@ -81,7 +80,7 @@ const ZappyDetails = () => {
                         </div>
                         <div className="mt-4 flex w-full">
                             <a
-                                href="#"
+                                href="https://github.com/colinack/Zappy"
                                 className="w-full flex items-center justify-center gap-2 bg-foreground text-background comic-border-thick py-3 font-display text-xl comic-hover hover:bg-card hover:text-card-foreground transition-colors"
                                 target="_blank"
                                 rel="noopener noreferrer"

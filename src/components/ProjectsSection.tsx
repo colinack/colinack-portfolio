@@ -26,7 +26,7 @@ const projects: Project[] = [
     imageColor: "bg-secondary",
     imageUrl: rtypeImg,
     detailsUrl: "/projects/rtype",
-    githubUrl: "#",
+    githubUrl: "https://github.com/colinack/RType",
   },
   {
     title: "ZAPPY",
@@ -36,7 +36,7 @@ const projects: Project[] = [
     imageColor: "bg-primary",
     imageUrl: zappyImg,
     detailsUrl: "/projects/zappy",
-    githubUrl: "#",
+    githubUrl: "https://github.com/colinack/Zappy",
   },
   {
     title: "Horror Game (Prototype)",
