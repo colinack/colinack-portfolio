@@ -73,9 +73,9 @@ const ProjectsSection = () => {
         <p className="text-center font-body text-muted-foreground text-lg mb-16 max-w-xl mx-auto">
           Each project is a chapter in my game development journey.
         </p>
-        <p className="text-center font-body text-muted-foreground text-lg mb-16 max-w-xl mx-auto">
+        {/* <p className="text-center font-body text-muted-foreground text-lg mb-16 max-w-xl mx-auto">
           <strong>Click on the project to explore more.</strong>
-        </p>
+        </p> */}
 
         {/* Projects grid — comic strip style */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">

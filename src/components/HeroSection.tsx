@@ -36,7 +36,7 @@ const HeroSection = () => {
 
             <div className="speech-bubble max-w-md mb-8 bg-card">
               <p className="font-body text-card-foreground text-lg">
-                Computer Science student at Epitech & aspiring <strong>Game Developer</strong>.
+                21yo Computer Science student at Epitech & aspiring <strong>Game Developer</strong>.
                 Passionate about crafting immersive gameplay experiences, from
                 engine architecture to player-facing systems.
               </p>
