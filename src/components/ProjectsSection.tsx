@@ -5,6 +5,7 @@ import rtypeImg from "@/assets/rtype-screen.png";
 import zappyImg from "@/assets/zappy-screen.png";
 import platformerImg from "@/assets/2Dplateformer-screen.png";
 import horrorImg from "@/assets/horror-game-screen.png";
+import otsImg from "@/assets/ots-screen.png";
 
 interface Project {
   title: string;
@@ -55,6 +56,15 @@ const projects: Project[] = [
     imageUrl: platformerImg,
     detailsUrl: "/projects/platformer",
   },
+  {
+    title: "Oath of the Slain (In Progress)",
+    description:
+      "My graduation project currently in development. It's a tactical PvP game where players engage in strategic battles tournament-style, with a gameplay twist.",
+    techStack: ["Unity", "C#", "TCP", "PVP", "PostgreSQL"],
+    imageColor: "bg-destructive",
+    imageUrl: otsImg,
+    detailsUrl: "/projects/ots", // Add the URL once the detail page is created
+  }
 ];
 
 const ProjectsSection = () => {

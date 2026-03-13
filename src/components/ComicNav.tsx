@@ -28,8 +28,8 @@ const ComicNav = () => {
       }>
       
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="font-display text-2xl tracking-wider text-primary">Colin
-
+        <a href="#" className="font-display text-2xl tracking-wider text-primary">
+          Colin's Portfolio
         </a>
 
         {/* Desktop nav */}

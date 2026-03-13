@@ -9,6 +9,7 @@ import RTypeDetails from "./pages/RTypeDetails";
 import ZappyDetails from "./pages/ZappyDetails";
 import PlatformerDetails from "./pages/PlatformerDetails";
 import HorrorDetails from "./pages/HorrorDetails";
+import OtsDetails from "./pages/OtsDetails";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/projects/zappy" element={<ZappyDetails />} />
           <Route path="/projects/platformer" element={<PlatformerDetails />} />
           <Route path="/projects/horror" element={<HorrorDetails />} />
+          <Route path="/projects/ots" element={<OtsDetails />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
