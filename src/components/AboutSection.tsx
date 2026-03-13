@@ -7,8 +7,9 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 bg-background relative" ref={ref}>
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-24 bg-background comic-dots relative overflow-hidden" ref={ref}>
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none comic-dots-pattern"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -73,7 +74,7 @@ const AboutSection = () => {
               <div className="comic-border-thick comic-shadow bg-comic-purple text-primary-foreground p-6 md:p-10 halftone relative h-full rotate-[-1deg] hover:rotate-[1deg] hover:-translate-y-1 hover:scale-105 transition-all duration-300">
                 <div className="relative z-10">
                   <div className="bg-accent text-accent-foreground font-display text-lg px-3 py-1 comic-border inline-block mb-4 rotate-[1deg]">
-                    MY PASSION
+                    Beyond code
                   </div>
                   <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
                     <div className="flex-1">

@@ -42,8 +42,11 @@ const ExperienceSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="py-24 bg-muted relative" ref={ref}>
-      <div className="container mx-auto px-6">
+    <section id="experience" className="py-24 bg-muted relative overflow-hidden" ref={ref}>
+      {/* Subtle diagonal comic hatching */}
+      <div className="absolute inset-0 opacity-5 bg-[repeating-linear-gradient(45deg,transparent,transparent_20px,var(--foreground)_20px,var(--foreground)_22px)] pointer-events-none"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl sm:text-6xl font-display inline-block bg-comic-purple text-primary-foreground px-6 py-2 comic-border-thick comic-shadow rotate-[1deg]">
             THE TIMELINE
@@ -70,8 +73,8 @@ const ExperienceSection = () => {
               <div className={`ml-14 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
                 <div
                   className={`comic-border-thick comic-shadow p-5 comic-card-hover ${item.type === "education"
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-card text-card-foreground"
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-card text-card-foreground"
                     }`}
                 >
                   <span className="font-display text-sm bg-accent text-accent-foreground px-2 py-0.5 comic-border inline-block mb-2">

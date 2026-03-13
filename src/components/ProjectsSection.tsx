@@ -72,8 +72,11 @@ const ProjectsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="projects" className="py-24 bg-background relative" ref={ref}>
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-32 bg-secondary/10 relative overflow-hidden border-y-4 border-foreground" ref={ref}>
+      {/* Subtle comic speedlines background effect */}
+      <div className="absolute inset-0 opacity-[0.02] bg-[repeating-linear-gradient(0deg,transparent,transparent_10px,var(--foreground)_10px,var(--foreground)_11px)] pointer-events-none"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section title */}
         <div className="text-center mb-6">
           <h2 className="text-5xl sm:text-6xl font-display inline-block bg-accent text-accent-foreground px-6 py-2 comic-border-thick comic-shadow rotate-[-1deg]">
