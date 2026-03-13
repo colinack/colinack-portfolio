@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import { ExternalLink, Github } from "lucide-react";
 import rtypeImg from "@/assets/rtype-screen.png";
 import zappyImg from "@/assets/zappy-screen.png";
@@ -140,13 +141,13 @@ const ProjectsSection = () => {
 
                 {/* Action buttons */}
                 <div className="flex gap-3">
-                  <a
-                    href={project.detailsUrl}
+                  <Link
+                    to={project.detailsUrl}
                     className="flex-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground comic-border px-4 py-3 font-display text-lg comic-hover hover:bg-secondary transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
                     VIEW DETAILS
-                  </a>
+                  </Link>
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}
