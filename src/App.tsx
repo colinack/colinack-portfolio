@@ -18,7 +18,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/colinack-portfolio/">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/projects/rtype" element={<RTypeDetails />} />
