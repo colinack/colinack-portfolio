@@ -50,7 +50,7 @@ const HeroSection = () => {
                 ⚡ START THE ADVENTURE
               </a>
               <a
-                href="/resume.pdf"
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-comic-cyan text-primary-foreground comic-border-thick comic-shadow-lg px-8 py-4 font-display text-2xl tracking-wide comic-hover hover:bg-background hover:text-foreground"
