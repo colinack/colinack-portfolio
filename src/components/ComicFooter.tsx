@@ -20,7 +20,7 @@ const ComicFooter = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/colin-ack"
+              href="https://linkedin.com/in/raphael-maigret"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 hover:text-accent transition-colors"
@@ -29,7 +29,7 @@ const ComicFooter = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="mailto:colin13470@gmail.com"
+              href="mailto:raphmaigret@gmail.com"
               className="p-2 hover:text-accent transition-colors"
               aria-label="Email"
             >
